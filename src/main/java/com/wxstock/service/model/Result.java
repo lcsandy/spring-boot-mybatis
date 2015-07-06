@@ -33,6 +33,4 @@ public class Result<T> {
         result.message = message;
         return result;
     }
-
-
 }
