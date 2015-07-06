@@ -22,6 +22,21 @@ import javax.sql.DataSource;
 @Configuration
 @MapperScan("com.wxstock.repository.mapper")
 public class AppConfig {
+
+//    @Autowired
+//    private AppDataSourceProperties appDataSourceProperties;
+
+//    @Bean
+//    public DataSource getDataSource() {
+//        DruidDataSource dataSource = new DruidDataSource();
+//        dataSource.setDriverClassName(appDataSourceProperties.getDriver());
+//        dataSource.setUrl(appDataSourceProperties.getUrl());
+//        dataSource.setUsername(appDataSourceProperties.getUsername());
+//        dataSource.setPassword(appDataSourceProperties.getPassword());
+//        dataSource.setValidationQuery("select 1");
+//        return dataSource;
+//    }
+
     @Bean
     public DataSource getDataSource() {
         BasicDataSource dataSource = new BasicDataSource();

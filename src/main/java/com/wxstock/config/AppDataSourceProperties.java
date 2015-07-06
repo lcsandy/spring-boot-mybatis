@@ -4,27 +4,23 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import javax.validation.constraints.NotNull;
 
-
-@ConfigurationProperties(prefix = "cubes-mysql")
-public class DataSourceProperties {
+@ConfigurationProperties(prefix = "spring.datasource")
+public class AppDataSourceProperties {
     @NotNull
     private String username;
     @NotNull
     private String password;
     @NotNull
     private String url;
-
     @NotNull
-    private String driverClassName;
+    private String driver;
 
-    public DataSourceProperties() {
+    public AppDataSourceProperties() {
     }
-
 
     public String getUsername() {
         return username;
     }
-
 
     public void setUsername(String username) {
         this.username = username;
@@ -38,7 +34,6 @@ public class DataSourceProperties {
         this.password = password;
     }
 
-
     public String getUrl() {
         return url;
     }
@@ -47,11 +42,11 @@ public class DataSourceProperties {
         this.url = url;
     }
 
-    public String getDriverClassName() {
-        return driverClassName;
+    public String getDriver() {
+        return driver;
     }
 
-    public void setDriverClassName(String driverClassName) {
-        this.driverClassName = driverClassName;
+    public void setDriver(String driver) {
+        this.driver = driver;
     }
 }
